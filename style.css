@@ -1,0 +1,22 @@
+#numbers-app {
+    margin: auto;
+    width: 50%;
+}
+
+button {
+    font-weight: bold;
+    margin: auto;
+    width: 30%;
+    background-color: antiquewhite;
+    color:rgb(17, 17, 77);
+}
+
+button:hover {
+    background-color: rgb(17, 17, 77);
+    color:antiquewhite;
+}
+
+#numbers-app table {
+    text-align: center;
+    padding: 1rem;
+}
