@@ -3,9 +3,6 @@ const root = document.getElementById('numbers-app');
 const btn = document.createElement("button");
 btn.innerHTML = "Wylosuj liczby"
 root.append(btn);
-
-const div = document.createElement("div");
-root.append(div);
   
 function getRandom(k, n) {
     const numbers = new Array(n);
@@ -14,19 +11,19 @@ function getRandom(k, n) {
     for (let i=0; i<n; i++) {
     numbers[i] = i + 1;
     }
-    // losowanie k liczb
+    // choose k numbers
     for (let i=0; i<k; i++) {
      
-    // tworzenie losowego indeksu pomiędzy 0 i n - 1
+    // creating a random index between 0 i n - 1
     let r = Math.floor(Math.random()*n);
      
-    // wybieramy element z losowego miejsca
+    // choose an element from a random place
     pickedNumbers.push(numbers[r]);
      
-    // przeniesienia ostatniego elementu do miejsca z którego wzięliśmy
+    // moving the last item to the place we took it from
     numbers[r] = numbers[n - 1];
      
-    //zmniejszamy n
+    //decresee n
     n--;
     }
     return pickedNumbers.sort((a,b) => a-b);
