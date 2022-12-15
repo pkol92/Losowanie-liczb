@@ -1,3 +1,5 @@
+import { sortNumbers } from "./sortNumbers";
+
 const root = document.getElementById("numbers-app");
 const btn = document.createElement("button");
 root.append(btn);

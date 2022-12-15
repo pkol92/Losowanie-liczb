@@ -1,0 +1,1 @@
+(()=>{const e=document.getElementById("numbers-app"),t=document.createElement("button");e.append(t);const n=document.createElement("div");e.append(n),t.addEventListener("click",(()=>{sortNumbers()}))})();

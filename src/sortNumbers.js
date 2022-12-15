@@ -1,3 +1,6 @@
+import { getRandomNumbers } from "./getRandomNumbers";
+import { makeTable } from "./makeTable";
+
 export const sortNumbers = () => {
   const numbers = getRandomNumbers(20, 100);
   const even = [];
