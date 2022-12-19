@@ -2,20 +2,16 @@ const path = require("path");
 const { HtmlWebpackPlugin } = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/app.js",
+  entry: { bundle: path.resolve(__dirname, "./src/app.js") },
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
       {
         test: /\.html$/,
         use: ["html-loader"],
-      },
-      {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader"],
       },
     ],
   },

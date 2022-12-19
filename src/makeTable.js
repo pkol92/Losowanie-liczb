@@ -1,4 +1,4 @@
-export const makeTable = (array1, array2, fieldTitles) => {
+export const makeTable = (array1, array2, fieldTitles, root) => {
   let table = document.createElement("table");
   table.setAttribute("id", "tab");
   let thead = document.createElement("thead");
