@@ -1,5 +1,5 @@
 import { sortNumbers } from "./sortNumbers";
-import "./style.css";
+import "./style.scss";
 
 const body = document.body;
 const div = document.createElement("div");

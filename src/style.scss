@@ -1,0 +1,36 @@
+body {
+  background-color: beige;
+}
+
+#numbers-app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+
+  button {
+    width: 200px;
+    padding: 1rem;
+    margin: 2rem;
+    font-weight: bold;
+    background-color: antiquewhite;
+    color: rgb(17, 17, 77);
+    border-radius: 10px;
+
+    &:hover {
+      background-color: rgb(17, 17, 77);
+      color: antiquewhite;
+      box-shadow: 0 0 1rem black;
+    }
+  }
+
+  table {
+    text-align: center;
+    width: 30%;
+
+    th {
+      width: 50%;
+      padding: 1rem;
+    }
+  }
+}
