@@ -1,3 +1,5 @@
+@import url(./font.scss);
+
 body {
   background-color: beige;
 }
@@ -16,6 +18,7 @@ body {
     background-color: antiquewhite;
     color: rgb(17, 17, 77);
     border-radius: 10px;
+    font-family: "Open Sans Italic";
 
     &:hover {
       background-color: rgb(17, 17, 77);

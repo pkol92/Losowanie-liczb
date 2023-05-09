@@ -14,6 +14,12 @@ module.exports = {
         use: ["html-loader"],
       },
       { test: /\.svg$/, use: "svg-inline-loader" },
+      {
+        test: /\.(woff|woff2|eot|ttf)$/,
+        use: {
+          loader: "url-loader",
+        },
+      },
     ],
   },
 };
