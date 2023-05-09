@@ -3,12 +3,20 @@
 body {
   background-color: beige;
 
-  .div-image {
+  .div-image-numbers {
     background: url("./Assets/Images/numbers.png") no-repeat center;
     height: 200px;
     width: 300px;
     background-size: contain;
     margin: auto;
+  }
+
+  .div-image-bottom {
+    background: url("./Assets/Images/mathematic.jpg") no-repeat center;
+    height: 300px;
+    width: 100%;
+    background-size: contain;
+    margin: 20px auto 0;
   }
 }
 

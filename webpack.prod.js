@@ -20,7 +20,7 @@ module.exports = merge(common, {
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.png$/i,
+        test: /\.(png|jpg)$/i,
         type: "asset/resource",
         generator: {
           filename: "assets/images/[name][ext]",

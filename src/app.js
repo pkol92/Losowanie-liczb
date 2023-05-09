@@ -3,9 +3,9 @@ import "./style.scss";
 import dices from "./Assets/Images/dices.svg";
 
 const body = document.body;
-const divWithImage = document.createElement("div");
-divWithImage.setAttribute("class", "div-image");
-body.append(divWithImage);
+const divWithImageNumbers = document.createElement("div");
+divWithImageNumbers.setAttribute("class", "div-image-numbers");
+body.append(divWithImageNumbers);
 
 const div = document.createElement("div");
 div.setAttribute("id", "numbers-app");
@@ -29,3 +29,7 @@ const createIcon = () => {
 };
 
 btn.appendChild(createIcon());
+
+const divWithImageBottom = document.createElement("div");
+divWithImageBottom.setAttribute("class", "div-image-bottom");
+body.append(divWithImageBottom);

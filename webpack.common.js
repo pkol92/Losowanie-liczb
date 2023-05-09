@@ -15,13 +15,13 @@ module.exports = {
         use: ["html-loader"],
       },
       {
-        test: /\.(woff|woff2|eot|ttf|jpg)$/,
+        test: /\.(woff|woff2|eot|ttf)$/,
         use: {
           loader: "url-loader",
         },
       },
       {
-        test: /\.png$/,
+        test: /\.(png|jpg)$/,
         type: "asset/resource",
       },
       {
