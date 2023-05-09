@@ -6,18 +6,35 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = merge(common, {
   mode: "production",
+
+  output: {
+    filename: "main.[contenthash].js",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "static/",
+    assetModuleFilename: "assets/[name][ext]",
+  },
   module: {
     rules: [
       {
         test: /\.(s(a|c)ss)$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
+      {
+        test: /\.png$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/images/[name][ext]",
+        },
+      },
+      {
+        test: /\.svg$/,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/icons/[name][ext]",
+        },
+        use: "svg-inline-loader",
+      },
     ],
-  },
-  output: {
-    filename: "main.[contenthash].js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "./",
   },
   plugins: [new MiniCssExtractPlugin(), new CleanWebpackPlugin()],
 });

@@ -1,5 +1,6 @@
 const path = require("path");
 const { HtmlWebpackPlugin } = require("html-webpack-plugin");
+const miniSVGDataURI = require("mini-svg-data-uri");
 
 module.exports = {
   entry: { bundle: path.resolve(__dirname, "./src/app.js") },
@@ -13,12 +14,26 @@ module.exports = {
         test: /\.html$/,
         use: ["html-loader"],
       },
-      { test: /\.svg$/, use: "svg-inline-loader" },
       {
-        test: /\.(woff|woff2|eot|ttf)$/,
+        test: /\.(woff|woff2|eot|ttf|jpg)$/,
         use: {
           loader: "url-loader",
         },
+      },
+      {
+        test: /\.png$/,
+        type: "asset/resource",
+      },
+      {
+        test: /\.svg$/i,
+        use: [
+          {
+            loader: "svg-inline-loader",
+            options: {
+              generator: (content) => miniSVGDataURI(content.toString()),
+            },
+          },
+        ],
       },
     ],
   },

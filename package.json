@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "clean-webpack-plugin": "^4.0.0",
+    "mini-svg-data-uri": "^1.4.4",
     "webpack-dev-server": "^4.11.1",
     "webpack-merge": "^5.8.0"
   }

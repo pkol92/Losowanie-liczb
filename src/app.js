@@ -1,7 +1,12 @@
 import { sortNumbers } from "./sortNumbers";
 import "./style.scss";
+import dices from "./Assets/Images/dices.svg";
 
 const body = document.body;
+const divWithImage = document.createElement("div");
+divWithImage.setAttribute("class", "div-image");
+body.append(divWithImage);
+
 const div = document.createElement("div");
 div.setAttribute("id", "numbers-app");
 body.append(div);
@@ -15,3 +20,12 @@ btn.addEventListener("click", () => {
   table && table.remove();
   sortNumbers(root);
 });
+
+const createIcon = () => {
+  const element = document.createElement("div");
+  element.innerHTML = dices;
+  element.setAttribute("class", "icon");
+  return element;
+};
+
+btn.appendChild(createIcon());

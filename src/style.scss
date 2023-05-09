@@ -2,6 +2,14 @@
 
 body {
   background-color: beige;
+
+  .div-image {
+    background: url("./Assets/Images/numbers.png") no-repeat center;
+    height: 200px;
+    width: 300px;
+    background-size: contain;
+    margin: auto;
+  }
 }
 
 #numbers-app {
@@ -24,6 +32,13 @@ body {
       background-color: rgb(17, 17, 77);
       color: antiquewhite;
       box-shadow: 0 0 1rem black;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      margin: auto;
+      padding-top: 10px;
     }
   }
 
