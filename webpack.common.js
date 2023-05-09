@@ -3,7 +3,12 @@ const { HtmlWebpackPlugin } = require("html-webpack-plugin");
 const miniSVGDataURI = require("mini-svg-data-uri");
 
 module.exports = {
-  entry: { bundle: path.resolve(__dirname, "./src/app.js") },
+  entry: {
+    main: path.resolve(__dirname, "./src/app.js"),
+    table: path.resolve(__dirname, "./src/makeTable.js"),
+    sort: path.resolve(__dirname, "./src/sortNumbers.js"),
+    getNumbers: path.resolve(__dirname, "./src/getRandomNumbers.js"),
+  },
   module: {
     rules: [
       {
